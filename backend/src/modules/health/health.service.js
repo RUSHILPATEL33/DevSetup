@@ -1,12 +1,14 @@
 const getHealthStatus = () => {
-  return {
-    success: true,
-    message: "DevSetup Doctor API is running 🚀",
-    version: "1.0.0",
-    timestamp: new Date().toISOString(),
-  };
+
+    return {
+        status: "UP",
+        application: "DevSetup Doctor",
+        version: "1.0.0",
+        environment: process.env.NODE_ENV || "development"
+    };
+
 };
 
 export default {
-  getHealthStatus,
+    getHealthStatus
 };
