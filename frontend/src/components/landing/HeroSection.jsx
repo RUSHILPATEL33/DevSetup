@@ -1,4 +1,4 @@
-import { ArrowRight, Github } from "lucide-react";
+import { ArrowRight } from "lucide-react";  
 import HeroMockTerminal from "./HeroMockTerminal";
 
 function HeroSection() {
@@ -36,7 +36,6 @@ function HeroSection() {
             </button>
 
             <button className="flex items-center gap-2 rounded-xl border border-slate-700 px-6 py-3 font-semibold text-slate-300 transition hover:border-blue-500 hover:text-white">
-              <Github size={18} />
               GitHub
             </button>
 
