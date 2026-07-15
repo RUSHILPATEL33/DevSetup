@@ -1,5 +1,5 @@
 import express from "express";
-
+import authMiddleware from "../../middlewares/auth.middleware.js";
 import {
   register,
   login,
@@ -27,5 +27,12 @@ router.post(
   validateRequest,
   login
 );
+router.get("/test", authMiddleware, (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "Protected Route",
+    user: req.user,
+  });
+});
 
 export default router;

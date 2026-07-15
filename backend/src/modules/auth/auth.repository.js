@@ -9,5 +9,5 @@ export const createUser = async (userData) => {
 };
 
 export const findUserById = async (id) => {
-  return await User.findById(id);
+  return await User.findById(id).select("-password");
 };
