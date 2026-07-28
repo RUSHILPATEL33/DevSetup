@@ -27,6 +27,7 @@ router.post(
   validateRequest,
   login
 );
+
 router.get("/test", authMiddleware, (req, res) => {
   res.status(200).json({
     success: true,
