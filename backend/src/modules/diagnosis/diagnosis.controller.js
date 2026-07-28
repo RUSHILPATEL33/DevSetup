@@ -4,7 +4,11 @@ import { scanEnvironmentService } from "./diagnosis.service.js";
 
 export const environmentScan = async (req, res, next) => {
   try {
-    const result = await scanEnvironmentService(req.body);
+    const report = await scanEnvironmentService(
+    req.body,
+    req.user.id,
+    req.body.project
+);
     return ApiResponse.success(
       res,
       200,
